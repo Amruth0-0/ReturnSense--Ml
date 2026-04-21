@@ -11,6 +11,12 @@ This dashboard is built for presentation, demonstrating the ability to turn unst
 - **Anti-Collision Theme Generation:** Algorithmically builds concise Cluster Themes while actively filtering out overlapping keywords.
 - **Fault-Tolerant Demo Mode:** Automatically detects missing `.csv` datasets and generates realistic mock data on the fly, ensuring live presentations never crash.
 
+## 📊 Evaluation Metrics
+Because this project utilizes Unsupervised Learning, traditional accuracy metrics (like F1-Score or Recall) do not apply. Instead, the model's performance and clustering validity are evaluated using the **Silhouette Score**.
+
+- **Silhouette Score Validation:** The pipeline iteratively tests cluster counts (K=2 through 8). For each K, it calculates the mean Silhouette Coefficient, which measures how similar an object is to its own cluster compared to other clusters.
+- **Automated Optimization:** The algorithm mathematically proves and selects the optimal number of problem categories by choosing the `K` value that produces the highest global Silhouette Score.
+
 ## Getting Started
 
 1. Clone the repository.
